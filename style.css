@@ -218,11 +218,13 @@ body{
     }
 
     .rating {
+        margin-top: 20px;
         font-size: 13px; /* Adjust font size for smaller screens */
     }
 
     .rating i {
         font-size: 15px; /* Adjust star size */
+        
     }
 
     .icons_nav_bar {
@@ -238,6 +240,7 @@ body{
     .footer {
         gap: 10px; /* Further reduce spacing between footer icons */
         border-radius: 15px; /* Smaller rounded corners */
+        width: 80%;
     }
 
     .footer_icon {
@@ -247,7 +250,7 @@ body{
     .apartmens_details{
         margin-top: 40px;
         margin-bottom: 40px;
-        margin-left: 25%;
+        margin-left:8%;
         font-family: Georgia, serif;
     }
     
