@@ -1,3 +1,6 @@
+
+
+
 .icons_nav_bar{
     text-align: center;
     font-size: 50;
@@ -140,7 +143,13 @@ body{
 
 /* General Responsive Styles for iPad and iPhone */
 
+
 /* For screens smaller than 768px (iPads and larger phones in portrait mode) */
+
+
+
+
+
 @media (max-width: 768px) {
     #example_apartment_carousel {
         width: 90%; /* Make the carousel wider on smaller screens */
@@ -200,13 +209,75 @@ body{
 
 
 /* For screens smaller than 576px (iPhones and smaller devices) */
-@media (max-width: 576px) {
+@media (max-width: 576px) 
+{
+
+    body{
+
+        padding-bottom: none; 
+        padding-top: none; 
+    }
+
+/* Full-width parent and input */
+.d-flex {
+    width: 100%; /* Ensure the parent takes the full width */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.search_line {
+    width: 100%; /* Ensure the input spans full width */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px; /* Adjust font size for better readability */
+    padding: 10px; /* Add padding inside the input */
+    border: 1px solid #ccc; /* Optional: Border styling */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #f8f9fa; /* Optional: Set background color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #f8f9fa; /* Optional: Set background color */
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    padding: 10px 0; /* Add padding for better appearance */
+}
+
+
+
+
+
+
+
+
+
+
+
+    .search_line{
+        width: :100%;
+
+    }
+
     #example_apartment_carousel {
         width: 90%; 
         height: 400px; 
         margin-bottom: 20px;/* Reduce height for smaller screens */
 
     }
+
 
     .example_apartment_Carousel_item img {
         height: auto; /* Ensure images scale correctly */
@@ -240,7 +311,7 @@ body{
     .footer {
         gap: 10px; /* Further reduce spacing between footer icons */
         border-radius: 15px; /* Smaller rounded corners */
-        width: 80%;
+        width: 90%;
     }
 
     .footer_icon {
@@ -250,7 +321,7 @@ body{
     .apartmens_details{
         margin-top: 40px;
         margin-bottom: 40px;
-        margin-left:8%;
+        margin-left:4%;
         font-family: Georgia, serif;
     }
     
