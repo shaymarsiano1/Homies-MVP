@@ -1,329 +1,153 @@
-
-
-
-.icons_nav_bar{
-    text-align: center;
-    font-size: 50;
-}
-
-.icon_in_nav_bar{
-    width: 30px;
-    height: 30px;
-}
-
-.nav-pills{
-    display:flex;
-    gap:20px;
-}
-
-
-/* Carousel Container */
-#example_apartment_carousel {
-    width: 50%; 
-    height: 600px;
-    margin: auto; 
-    border-radius: 10%;
-}
-
-/* Images in Carousel */
-.example_apartment_Carousel_item img {
-    width: 100%; /* Make images span full width */
-    height: 100%; /* Match the height of the carousel */
-    object-fit: cover; 
-    border-radius: 10%;
-}
-
-.carousel-indicators button {
-    background-color: #fff; /* White dots */
-    border: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.carousel-indicators .active {
-    background-color: #007bff; /* Blue for active indicator */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1); /* Make icons visible on dark backgrounds */
-}
-
-/* Like Button Styling */
-/* Default Like Button Styling */
-.like-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white; /* Default color */
-    cursor: pointer;
-    z-index: 10;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-  
-  /* Hover Effect: Show the filled heart */
-.like-button:hover i {
-    content: "";
-    color: red; /* Change heart color to red */
-    transform: scale(1.2); /* Slight enlarge effect */
-}
-  
-  /* Active (liked) state */
-.like-button.active i {
-    color: red; /* Filled heart remains red after click */
-}
-  
-.apartmens_details{
-    padding-top: 40px;
-    margin-left: 25%;
-    font-family: Georgia, serif;
-}
-
-
-.rating {
-    display: flex;
-    align-items: center;
-    font-family: 'Poppins', sans-serif; /* Use any desired font */
-    font-size: 16px; /* Adjust text size */
-    color: #333; /* Adjust color */
-    float: right;
-
-}
-
-.rating i {
-    color: #FFD700; /* Gold color for the star */
-    font-size: 20px; /* Adjust star size */
-    margin-right: 5px; /* Add spacing between star and text */
-}
-
-.apartmens_details
-{
-    width: 50%;
-    margin:auto;
-    font-family: "DM Serif Text", serif;
-
-}
-
-
-.footer{
-    display:flex;
-    justify-content: center;
-    gap:10px;
-    background-color: #D0DDD0;
-
-    border-radius: 25px; /* Add rounded corners */
-    width: 50%; /* Adjust the width to your preference */
-    margin: 0 auto; /* Center the footer horizontally */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /
-}
-
-
-.footer_nav-item
-{
-    width: 50px;
-    height: 50px;
-}
-
-.footer_icon{
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-}
-
-body{
-    font-family: "Caveat", serif;
-}
-
-
-
-
-/* General Responsive Styles for iPad and iPhone */
-
-
-/* For screens smaller than 768px (iPads and larger phones in portrait mode) */
-
-
-
-
-
-@media (max-width: 768px) {
-    #example_apartment_carousel {
-        width: 90%; /* Make the carousel wider on smaller screens */
-        height: 10px; /* Adjust height for smaller screens */
-        margin-bottom: 70px;
+/* General Styles for iPhone (max-width 576px) */
+@media (max-width: 576px) {
+    body {
+        padding-bottom: 60px;
+        padding-top: 60px;
+        font-family: "Caveat", serif;
     }
 
-    .example_apartment_Carousel_item img {
-        height: 100%; /* Ensure images fill the carousel area */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #f8f9fa;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .apartmens_details {
-        margin-top: 20px;
-        width: 90%; /* Reduce width for smaller screens */
-        margin: auto;
-        font-size: 14px; /* Adjust font size for better readability */
+    /* Input Field */
+    .d-flex {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .rating {
-        font-size: 14px; /* Adjust the font size for smaller screens */
+    .search_line {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
 
-    .rating i {
-        font-size: 18px; /* Adjust star size */
-        margin-right: 3px;
-    }
-
+    /* Icons Navigation Bar */
     .icons_nav_bar {
-        font-size: 20px; /* Scale down icons in the nav bar */
-        gap: 15px; /* Reduce gap between icons */
-    }
-
-    .icon_in_nav_bar {
-        width: 25px; /* Adjust icon width */
-        height: 25px; /* Adjust icon height */
-    }
-
-    .footer {
-        gap: 40px; /* Reduce spacing between footer icons */
-        padding: 10px 0;
-        border-radius: 20px; /* Slightly smaller rounded corners */
-    }
-
-    .footer_icon {
-        width: 100%; /* Adjust footer icon size */
-
-    }
-
-    .apartmens_details{
-        margin-top: 40px;
-        margin-left: 25%;
-        font-family: Georgia, serif;
-    }
-    
-
-}
-
-
-/* For screens smaller than 576px (iPhones and smaller devices) */
-@media (max-width: 576px) 
-{
-
-    body{
-
-        padding-bottom: none; 
-        padding-top: none; 
-    }
-
-/* Full-width parent and input */
-.d-flex {
-    width: 100%; /* Ensure the parent takes the full width */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
-}
-
-.search_line {
-    width: 100%; /* Ensure the input spans full width */
-    box-sizing: border-box; /* Include padding and border in width */
-    font-size: 16px; /* Adjust font size for better readability */
-    padding: 10px; /* Add padding inside the input */
-    border: 1px solid #ccc; /* Optional: Border styling */
-    border-radius: 5px; /* Optional: Rounded corners */
-}
-
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensures it stays above other elements */
-    background-color: #f8f9fa; /* Optional: Set background color */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensures it stays above other elements */
-    background-color: #f8f9fa; /* Optional: Set background color */
-    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-    padding: 10px 0; /* Add padding for better appearance */
-}
-
-
-
-
-
-
-
-
-
-
-
-    .search_line{
-        width: :100%;
-
-    }
-
-    #example_apartment_carousel {
-        width: 90%; 
-        height: 400px; 
-        margin-bottom: 20px;/* Reduce height for smaller screens */
-
-    }
-
-
-    .example_apartment_Carousel_item img {
-        height: auto; /* Ensure images scale correctly */
-    }
-
-    .apartmens_details {
-        width: 100%; /* Use full width for text */
-        font-size: 12px; /* Further reduce font size */
-    }
-
-    .rating {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        list-style: none;
         margin-top: 20px;
-        font-size: 13px; /* Adjust font size for smaller screens */
     }
 
-    .rating i {
-        font-size: 15px; /* Adjust star size */
-        
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 10px;
     }
 
-    .icons_nav_bar {
-        font-size: 16px; /* Adjust font size for icons */
-        gap: 1px; /* Reduce gap between icons */
+    .heart_icon {
+        width: 40px;
+        height: 40px;
     }
 
-    .icon_in_nav_bar {
-        width: 50px; /* Adjust icon size */
-        height: 20px;
+    .nav-item span {
+        margin-top: 5px;
+        font-size: 15px;
     }
 
-    .footer {
-        gap: 10px; /* Further reduce spacing between footer icons */
-        border-radius: 15px; /* Smaller rounded corners */
+    /* Carousel */
+    #example_apartment_carousel {
         width: 90%;
+        height: 300px;
+        margin-top: 100px;
+        margin-left:  auto;
+        margin-bottom: 50px;
+        border-radius: 10%;
+    }
+
+    .first_apartment_pic_description{
+        padding-top: 40px;
+    }
+
+    .example_apartment_Carousel_item img {
+        width: 100%;
+        height: 300px;
+        object-fit:none;
+        border-radius: 10%;
+    }
+
+    .like-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 10;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .like-button:hover i {
+        color: red;
+        transform: scale(1.2);
+    }
+
+    .like-button.active i {
+        color: red;
+    }
+
+    /* Apartment Details */
+    .apartmens_details {
+        margin-bottom: 100px;
+        margin-left: 40px;
+        width: 100%;
+        font-size: 12px;
+        font-family: "DM Serif Text", serif;
+    }
+
+    .rating {
+        margin-top: 28px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        color: #333;
+        float:right;
+        padding: 20px;
+    }
+
+    .rating i {
+        font-size: 15px;
+        color: #FFD700;
+        margin-right: 5px;
+    }
+
+    /* Footer */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 70%;
+        height: 60px;
+        z-index: 1000;
+        background-color: #ECEBDE;
+        box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        border-radius: 25px;
+        padding-top: 20px;
+        left: 50%;
+        transform: translateX(-50%)
     }
 
     .footer_icon {
         height: 30px;
+        width: 50px;
+        margin: 0 20px;
     }
-
-    .apartmens_details{
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin-left:4%;
-        font-family: Georgia, serif;
-    }
-    
-    
 }
