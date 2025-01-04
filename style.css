@@ -14,15 +14,11 @@
 }
 
 
-
-
-
 /* Carousel Container */
 #example_apartment_carousel {
     width: 50%; 
-    height: 500px;
+    height: 600px;
     margin: auto; 
-    overflow: hidden; /* Ensures no overflow issues */
     border-radius: 10%;
 }
 
@@ -30,7 +26,8 @@
 .example_apartment_Carousel_item img {
     width: 100%; /* Make images span full width */
     height: 100%; /* Match the height of the carousel */
-    object-fit: cover; /* Ensures images don't stretch and maintain aspect ratio */
+    object-fit: cover; 
+    border-radius: 10%;
 }
 
 .carousel-indicators button {
@@ -104,21 +101,22 @@
 {
     width: 50%;
     margin:auto;
+    font-family: "DM Serif Text", serif;
+
 }
 
 
 .footer{
     display:flex;
     justify-content: center;
-    gap:60px;
+    gap:10px;
     background-color: #D0DDD0;
 
     border-radius: 25px; /* Add rounded corners */
-    width: 0%; /* Adjust the width to your preference */
+    width: 50%; /* Adjust the width to your preference */
     margin: 0 auto; /* Center the footer horizontally */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /
 }
-
 
 
 .footer_nav-item
@@ -128,7 +126,130 @@
 }
 
 .footer_icon{
-    padding-top: 10px;
+    margin-top: 10px;
     width: 40px;
     height: 40px;
+}
+
+body{
+    font-family: "Caveat", serif;
+}
+
+
+
+
+/* General Responsive Styles for iPad and iPhone */
+
+/* For screens smaller than 768px (iPads and larger phones in portrait mode) */
+@media (max-width: 768px) {
+    #example_apartment_carousel {
+        width: 90%; /* Make the carousel wider on smaller screens */
+        height: 10px; /* Adjust height for smaller screens */
+        margin-bottom: 70px;
+    }
+
+    .example_apartment_Carousel_item img {
+        height: 100%; /* Ensure images fill the carousel area */
+    }
+
+    .apartmens_details {
+        margin-top: 20px;
+        width: 90%; /* Reduce width for smaller screens */
+        margin: auto;
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .rating {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+
+    .rating i {
+        font-size: 18px; /* Adjust star size */
+        margin-right: 3px;
+    }
+
+    .icons_nav_bar {
+        font-size: 20px; /* Scale down icons in the nav bar */
+        gap: 15px; /* Reduce gap between icons */
+    }
+
+    .icon_in_nav_bar {
+        width: 25px; /* Adjust icon width */
+        height: 25px; /* Adjust icon height */
+    }
+
+    .footer {
+        gap: 40px; /* Reduce spacing between footer icons */
+        padding: 10px 0;
+        border-radius: 20px; /* Slightly smaller rounded corners */
+    }
+
+    .footer_icon {
+        width: 100%; /* Adjust footer icon size */
+
+    }
+
+    .apartmens_details{
+        margin-top: 40px;
+        margin-left: 25%;
+        font-family: Georgia, serif;
+    }
+    
+
+}
+
+
+/* For screens smaller than 576px (iPhones and smaller devices) */
+@media (max-width: 576px) {
+    #example_apartment_carousel {
+        width: 90%; 
+        height: 400px; 
+        margin-bottom: 20px;/* Reduce height for smaller screens */
+
+    }
+
+    .example_apartment_Carousel_item img {
+        height: auto; /* Ensure images scale correctly */
+    }
+
+    .apartmens_details {
+        width: 100%; /* Use full width for text */
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .rating {
+        font-size: 13px; /* Adjust font size for smaller screens */
+    }
+
+    .rating i {
+        font-size: 15px; /* Adjust star size */
+    }
+
+    .icons_nav_bar {
+        font-size: 16px; /* Adjust font size for icons */
+        gap: 1px; /* Reduce gap between icons */
+    }
+
+    .icon_in_nav_bar {
+        width: 50px; /* Adjust icon size */
+        height: 20px;
+    }
+
+    .footer {
+        gap: 10px; /* Further reduce spacing between footer icons */
+        border-radius: 15px; /* Smaller rounded corners */
+    }
+
+    .footer_icon {
+        height: 30px;
+    }
+
+    .apartmens_details{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 25%;
+        font-family: Georgia, serif;
+    }
+    
+    
 }
