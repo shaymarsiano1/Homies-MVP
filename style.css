@@ -1,0 +1,134 @@
+.icons_nav_bar{
+    text-align: center;
+    font-size: 50;
+}
+
+.icon_in_nav_bar{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-pills{
+    display:flex;
+    gap:20px;
+}
+
+
+
+
+
+/* Carousel Container */
+#example_apartment_carousel {
+    width: 50%; 
+    height: 500px;
+    margin: auto; 
+    overflow: hidden; /* Ensures no overflow issues */
+    border-radius: 10%;
+}
+
+/* Images in Carousel */
+.example_apartment_Carousel_item img {
+    width: 100%; /* Make images span full width */
+    height: 100%; /* Match the height of the carousel */
+    object-fit: cover; /* Ensures images don't stretch and maintain aspect ratio */
+}
+
+.carousel-indicators button {
+    background-color: #fff; /* White dots */
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff; /* Blue for active indicator */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Make icons visible on dark backgrounds */
+}
+
+/* Like Button Styling */
+/* Default Like Button Styling */
+.like-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white; /* Default color */
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+  
+  /* Hover Effect: Show the filled heart */
+.like-button:hover i {
+    content: "";
+    color: red; /* Change heart color to red */
+    transform: scale(1.2); /* Slight enlarge effect */
+}
+  
+  /* Active (liked) state */
+.like-button.active i {
+    color: red; /* Filled heart remains red after click */
+}
+  
+.apartmens_details{
+    padding-top: 40px;
+    margin-left: 25%;
+    font-family: Georgia, serif;
+}
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif; /* Use any desired font */
+    font-size: 16px; /* Adjust text size */
+    color: #333; /* Adjust color */
+    float: right;
+
+}
+
+.rating i {
+    color: #FFD700; /* Gold color for the star */
+    font-size: 20px; /* Adjust star size */
+    margin-right: 5px; /* Add spacing between star and text */
+}
+
+.apartmens_details
+{
+    width: 50%;
+    margin:auto;
+}
+
+
+.footer{
+    display:flex;
+    justify-content: center;
+    gap:60px;
+    background-color: #D0DDD0;
+
+    border-radius: 25px; /* Add rounded corners */
+    width: 0%; /* Adjust the width to your preference */
+    margin: 0 auto; /* Center the footer horizontally */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /
+}
+
+
+
+.footer_nav-item
+{
+    width: 50px;
+    height: 50px;
+}
+
+.footer_icon{
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+}
