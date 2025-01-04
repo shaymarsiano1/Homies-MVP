@@ -94,14 +94,32 @@
         transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .like-button:hover i {
-        color: red;
-        transform: scale(1.2);
-    }
 
     .like-button.active i {
         color: red;
     }
+
+    .like-button i {
+        color: white; /* Default color */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .like-button.active i {
+        color: red; /* Red when active */
+        transform: scale(1.2); /* Optional: Add scaling effect */
+    }
+    
+    .like-button i.bi-heart-fill {
+        color: red; /* Filled heart color */
+    }
+    
+
+
+
+
+
+
+
 
     /* Apartment Details */
     .apartmens_details {
