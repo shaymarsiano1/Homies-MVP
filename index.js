@@ -5,49 +5,32 @@ document.querySelectorAll('.like-button').forEach(button => {
         if (heartIcon.classList.contains('bi-heart')) {
             heartIcon.classList.remove('bi-heart');
             heartIcon.classList.add('bi-heart-fill');
-            heartIcon.style.color = 'red'; 
+            heartIcon.style.color = 'red';
         } else {
             heartIcon.classList.remove('bi-heart-fill');
             heartIcon.classList.add('bi-heart');
-            heartIcon.style.color = ''; 
+            heartIcon.style.color = '';
         }
     });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".footer_icon");
-
-    icons.forEach(icon => {
-        icon.addEventListener("click", handleIconClick);
-        icon.addEventListener("touchstart", handleIconClick);
-    });
-
-    function handleIconClick(event) {
-        event.preventDefault(); 
-        icons.forEach(i => i.classList.remove("active")); 
-        this.classList.add("active"); 
-
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
     const homeIcon = document.querySelector(".home-icon");
 
-    homeIcon.addEventListener("touchstart", (e) => {
-        e.preventDefault(); 
-        window.scrollTo({ top: 0, behavior: "smooth" }); // Smoothly scroll to the top
+    icons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            // Toggle active state for the clicked icon
+            icons.forEach(i => i.classList.remove("active"));
+            icon.classList.add("active");
+
+            // If Home icon is clicked, scroll to the top
+            if (icon === homeIcon) {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
     });
 });
-
-
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     // Open and close the filter sidebar
@@ -94,17 +77,28 @@ document.addEventListener("DOMContentLoaded", () => {
     minPriceRange.addEventListener("input", updatePriceDisplay);
     maxPriceRange.addEventListener("input", updatePriceDisplay);
 
+    // Validate input fields
+    function validateInputs(inputs) {
+        for (const input of inputs) {
+            if (isNaN(parseInt(input.value)) || input.value.trim() === "") {
+                alert(`Please enter a valid number for ${input.name}`);
+                input.focus(); // Focus on the invalid input
+                return false;
+            }
+        }
+        return true;
+    }
+
     // Handle Apply Filters
     document.getElementById("applyFilters").addEventListener("click", () => {
         const roomType = document.getElementById("roomType").value;
         const minPrice = minPriceRange.value;
         const maxPrice = maxPriceRange.value;
-        const roommates = document.getElementById("roommates").value;
-        const rooms = document.getElementById("rooms").value;
+        const roommates = document.getElementById("roommates");
+        const rooms = document.getElementById("rooms");
 
         // Validate numeric inputs
-        if (isNaN(roommates) || isNaN(rooms)) {
-            alert("Number of roommates and rooms should be valid numbers.");
+        if (!validateInputs([roommates, rooms])) {
             return;
         }
 
@@ -113,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
             roomType,
             minPrice,
             maxPrice,
-            roommates,
-            rooms,
+            roommates: roommates.value,
+            rooms: rooms.value,
         });
 
         // Hide the sidebar
