@@ -133,3 +133,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("rooms").value = "2";
     });
 });
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const personIcon = document.querySelector(".person-icon"); // Select the person icon
+    const homeIcon = document.querySelector(".home-icon"); // Select the home icon
+    const messagesIcon = document.querySelector(".messages-icon"); // Select the messages icon
+    const profilePage = document.getElementById("profilePage"); // Select the profile page container
+
+    // Show the profile page when the person icon is clicked
+    personIcon.addEventListener("click", () => {
+        profilePage.style.display = "block"; // Show the profile page
+    });
+
+    // Hide the profile page when the home or messages icon is clicked
+    const hideProfilePage = () => {
+        profilePage.style.display = "none"; // Hide the profile page
+    };
+
+    homeIcon.addEventListener("click", hideProfilePage);
+    messagesIcon.addEventListener("click", hideProfilePage);
+});
