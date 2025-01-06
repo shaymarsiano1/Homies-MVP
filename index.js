@@ -16,21 +16,28 @@ document.querySelectorAll('.like-button').forEach(button => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".footer_icon");
-    const homeIcon = document.querySelector(".home-icon");
-
     icons.forEach(icon => {
         icon.addEventListener("click", () => {
             // Toggle active state for the clicked icon
             icons.forEach(i => i.classList.remove("active"));
             icon.classList.add("active");
-
-            // If Home icon is clicked, scroll to the top
-            if (icon === homeIcon) {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            }
         });
     });
+
+    const homeIcon = document.querySelector(".home-icon"); // Select only the Home icon
+
+    if (homeIcon) {
+        homeIcon.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default behavior
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+        });
+    }
 });
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Open and close the filter sidebar
