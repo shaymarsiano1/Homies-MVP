@@ -26,7 +26,7 @@
     .search-icon {
         position: absolute;
         top: 50%;
-        left: 320px; /* Position inside the input */
+        left: 290px; /* Position inside the input */
         transform: translateY(-50%);
         font-size: 16px;
         color: #888;
@@ -44,6 +44,124 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
+
+
+
+
+
+
+
+.filter-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.filter-sidebar.show {
+    right: 0; 
+}
+
+/* Sidebar Header */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#priceRange {
+    width: 100%;
+}
+/* Price Range Display */
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#applyFilters
+{
+    background-color: #2E5077;
+    border: 0px;
+    
+}
+
+#applyFilters:hover
+{
+    background-color: #213555;
+}
+
+/* Smaller Number Input Boxes */
+.number-input {
+    text-align: center;
+}
+
+#roommates 
+{
+    width: 50%;
+
+}
+
+#rooms
+{
+    width: 50%;
+}
+
+
+/* all those 3 is fore changing price dots color */
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #2E5077; 
+}
+input[type="range"]::-moz-range-thumb {
+    background-color: #2E5077; 
+}
+input[type="range"]::-ms-thumb {
+    background-color: #2E5077; 
+}
+
+
+
+.form-group.d-flex {
+    display: flex;
+    gap: 10px; 
+    width: 100%; 
+}
+
+.form-group.d-flex button {
+    flex: 1; 
+}
+
+
+
+
+
+
 
     /* Icons Navigation Bar */
     .icons_nav_bar {
@@ -174,23 +292,23 @@
 
    
     .footer_icon {
-        display: inline-block; /* Ensures proper layout behavior */
-        height: 30px; /* Icon height */
-        width: 30px; /* Icon width */
-        margin: 0 30px; /* Spacing around the icon */
+        display: inline-block; 
+        height: 30px;
+        width: 30px; 
+        margin: 0 30px; 
         cursor: pointer;
-        border-radius: 50%; /* Creates the circular background */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth effect for resizing */
-        box-sizing: border-box; /* Includes padding and border in total size */
+        border-radius: 50%; 
+        transition: background-color 0.3s ease, transform 0.3s ease; 
+        box-sizing: border-box; 
     }
     
     .footer_icon.active {
-        background-color: white; /* White background when active */
-        height: 50px; /* Increase height */
-        width: 50px; /* Increase width */
-        padding: 10px; /* Add extra space around the icon */
-        transform: scale(1.2); /* Slightly scale up the whole icon and circle */
-        transition: all 0.3s ease; /* Smooth transition for resizing */
+        background-color: white; 
+        height: 50px; 
+        width: 50px; 
+        padding: 10px; 
+        transform: scale(1.2); 
+        transition: all 0.3s ease; 
     }
     
    

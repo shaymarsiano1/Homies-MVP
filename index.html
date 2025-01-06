@@ -73,6 +73,64 @@
 
   </header>
 
+
+
+
+<!-- Sidebar for Filter -->
+<div id="filterSidebar" class="filter-sidebar">
+  <div class="filter-header">
+      <h5>Filter Options</h5>
+      <button id="closeSidebar" class="close-btn">&times;</button>
+  </div>
+  <div class="filter-body">
+      <form>
+          <!-- Room Type Filter -->
+          <div class="form-group">
+              <label for="roomType">Room Type</label>
+              <select id="roomType" class="form-control">
+                  <option value="any">Any Room</option>
+                  <option value="master">Master Room</option>
+                  <option value="regular">Regular Room</option>
+              </select>
+          </div>
+          <!-- Price Range Filter -->
+          <div class="form-group">
+              <label for="priceRange">Price Range</label>
+              <div class="price-range-container">
+                  <input type="range" id="minPriceRange" class="form-range" min="100" max="5000" step="100" value="500">
+                  <input type="range" id="maxPriceRange" class="form-range" min="100" max="5000" step="100" value="3000">
+                  <div class="price-display">
+                      <span id="minPriceDisplay">$500</span> - <span id="maxPriceDisplay">3000</span>
+                  </div>
+              </div>
+          </div>
+          <!-- Number of Roommates Filter -->
+          <div class="form-group">
+              <label for="roommates">Number of Roommates</label>
+              <input type="number" id="roommates" class="form-control number-input" min="0" value="2" placeholder="2">
+          </div>
+          <!-- Number of Rooms Filter -->
+          <div class="form-group">
+              <label for="rooms">Number of Rooms</label>
+              <input type="number" id="rooms" class="form-control number-input" min="1" value="2" placeholder="2">
+          </div>
+          <!-- Buttons -->
+          <div class="form-group d-flex">
+              <button type="button" id="applyFilters" class="btn btn-primary">Show Results</button>
+              <button type="reset" id="clearFilters" class="btn btn-secondary">Clear All</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
   <div class="first_apartment_pic_description">
     <div class="apartment_pic_description">
       <div id="example_apartment_carousel" class="carousel slide mb-6" data-bs-ride="carousel">

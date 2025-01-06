@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const homeIcon = document.querySelector(".home-icon");
 
@@ -41,3 +42,93 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Open and close the filter sidebar
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const filterSidebar = document.getElementById("filterSidebar");
+    const closeSidebar = document.getElementById("closeSidebar");
+
+    // Open sidebar
+    dropdownToggle.addEventListener("click", () => {
+        filterSidebar.classList.add("show");
+    });
+
+    // Close sidebar
+    closeSidebar.addEventListener("click", () => {
+        filterSidebar.classList.remove("show");
+    });
+
+    // Handle Price Range Updates
+    const minPriceRange = document.getElementById("minPriceRange");
+    const maxPriceRange = document.getElementById("maxPriceRange");
+    const minPriceDisplay = document.getElementById("minPriceDisplay");
+    const maxPriceDisplay = document.getElementById("maxPriceDisplay");
+    const minPriceInput = document.getElementById("minPrice");
+    const maxPriceInput = document.getElementById("maxPrice");
+
+    function updatePriceDisplay() {
+        const minPrice = parseInt(minPriceRange.value);
+        const maxPrice = parseInt(maxPriceRange.value);
+
+        if (minPrice > maxPrice) {
+            alert("Minimum price cannot exceed maximum price.");
+            return;
+        }
+
+        // Update text display
+        minPriceDisplay.textContent = `$${minPrice}`;
+        maxPriceDisplay.textContent = `$${maxPrice}`;
+
+        // Update input values
+        minPriceInput.value = minPrice;
+        maxPriceInput.value = maxPrice;
+    }
+
+    minPriceRange.addEventListener("input", updatePriceDisplay);
+    maxPriceRange.addEventListener("input", updatePriceDisplay);
+
+    // Handle Apply Filters
+    document.getElementById("applyFilters").addEventListener("click", () => {
+        const roomType = document.getElementById("roomType").value;
+        const minPrice = minPriceRange.value;
+        const maxPrice = maxPriceRange.value;
+        const roommates = document.getElementById("roommates").value;
+        const rooms = document.getElementById("rooms").value;
+
+        // Validate numeric inputs
+        if (isNaN(roommates) || isNaN(rooms)) {
+            alert("Number of roommates and rooms should be valid numbers.");
+            return;
+        }
+
+        // Log filters (replace with logic to display results)
+        console.log({
+            roomType,
+            minPrice,
+            maxPrice,
+            roommates,
+            rooms,
+        });
+
+        // Hide the sidebar
+        filterSidebar.classList.remove("show");
+    });
+
+    // Handle Clear Filters
+    document.getElementById("clearFilters").addEventListener("click", () => {
+        document.getElementById("roomType").value = "any";
+        minPriceRange.value = "500";
+        maxPriceRange.value = "3000";
+        minPriceDisplay.textContent = "$500";
+        maxPriceDisplay.textContent = "$3000";
+        document.getElementById("roommates").value = "2";
+        document.getElementById("rooms").value = "2";
+    });
+});
