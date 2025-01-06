@@ -22,25 +22,11 @@
         padding: 0;
     }
 
-
-    .search-icon {
-        position: absolute;
-        top: 50%;
-        left: 320px; /* Position inside the input */
-        transform: translateY(-50%);
-        font-size: 16px;
-        color: #888;
-        pointer-events: none; /* Prevent interaction */
-    }
-
     .search_line {
-        padding-left: 35px; /* Add space for the icon */
-        position: relative;
         width: 100%;
         box-sizing: border-box;
-        font-size: 10px;
+        font-size: 16px;
         padding: 10px;
-        height: fit-content;
         border: 1px solid #ccc;
         border-radius: 5px;
     }
@@ -157,8 +143,8 @@
     footer {
         position: fixed;
         bottom: 0;
-        width: 80%;
-        height: 80px;
+        width: 70%;
+        height: 60px;
         z-index: 1000;
         background-color: #ECEBDE;
         box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
@@ -168,33 +154,15 @@
         padding-top: 20px;
         left: 50%;
         transform: translateX(-50%);
-        margin-bottom: auto;
-        
+        margin-left: auto;
+        margin-right: auto;
     }
 
-   
     .footer_icon {
-        display: inline-block; /* Ensures proper layout behavior */
-        height: 30px; /* Icon height */
-        width: 30px; /* Icon width */
-        margin: 0 30px; /* Spacing around the icon */
-        cursor: pointer;
-        border-radius: 50%; /* Creates the circular background */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth effect for resizing */
-        box-sizing: border-box; /* Includes padding and border in total size */
+        height: 30px;
+        width: 50px;
+        margin: 0 20px;
     }
-    
-    .footer_icon.active {
-        background-color: white; /* White background when active */
-        height: 50px; /* Increase height */
-        width: 50px; /* Increase width */
-        padding: 10px; /* Add extra space around the icon */
-        transform: scale(1.2); /* Slightly scale up the whole icon and circle */
-        transition: all 0.3s ease; /* Smooth transition for resizing */
-    }
-    
-   
-
 }
 
 
