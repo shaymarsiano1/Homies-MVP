@@ -18,18 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".footer_icon");
     icons.forEach(icon => {
         icon.addEventListener("click", () => {
-            // Toggle active state for the clicked icon
             icons.forEach(i => i.classList.remove("active"));
             icon.classList.add("active");
         });
     });
 
-    const homeIcon = document.querySelector(".home-icon"); // Select only the Home icon
+    const homeIcon = document.querySelector(".home-icon"); 
 
     if (homeIcon) {
         homeIcon.addEventListener("click", (event) => {
-            event.preventDefault(); // Prevent default behavior
-            window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+            event.preventDefault(); 
+            window.scrollTo({ top: 0, behavior: "smooth" }); 
         });
     }
 });
@@ -96,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return true;
     }
 
-    // Handle Apply Filters
     document.getElementById("applyFilters").addEventListener("click", () => {
         const roomType = document.getElementById("roomType").value;
         const minPrice = minPriceRange.value;
@@ -118,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
             rooms: rooms.value,
         });
 
-        // Hide the sidebar
         filterSidebar.classList.remove("show");
     });
 
@@ -139,24 +136,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    const personIcon = document.querySelector(".person-icon"); // Select the person icon
-    const homeIcon = document.querySelector(".home-icon"); // Select the home icon
-    const messagesIcon = document.querySelector(".messages-icon"); // Select the messages icon
-    const profilePage = document.getElementById("profilePage"); // Select the profile page container
+    const personIcon = document.querySelector(".person-icon"); 
+    const homeIcon = document.querySelector(".home-icon"); 
+    const messagesIcon = document.querySelector(".messages-icon"); 
+    const profilePage = document.getElementById("profilePage"); 
+    const messagesPage = document.getElementById("massagesPage"); 
 
-    // Show the profile page when the person icon is clicked
-    personIcon.addEventListener("click", () => {
-        profilePage.style.display = "block"; // Show the profile page
-    });
+    profilePage.style.display = "none";
+    messagesPage.style.display = "none";
 
-    // Hide the profile page when the home or messages icon is clicked
-    const hideProfilePage = () => {
-        profilePage.style.display = "none"; // Hide the profile page
-    };
+    function toggleMessagesPage() {
+        const isVisible = messagesPage.style.display === "block";
+        messagesPage.style.display = isVisible ? "none" : "block"; 
+        profilePage.style.display = "none"; 
+    }
 
-    homeIcon.addEventListener("click", hideProfilePage);
-    messagesIcon.addEventListener("click", hideProfilePage);
+    function showProfilePage() {
+        profilePage.style.display = "block"; 
+        messagesPage.style.display = "none"; 
+    }
+
+    function hideAllPages() {
+        profilePage.style.display = "none"; 
+        messagesPage.style.display = "none"; 
+    }
+
+    messagesIcon.addEventListener("click", toggleMessagesPage); 
+    personIcon.addEventListener("click", showProfilePage); 
+    homeIcon.addEventListener("click", hideAllPages); 
 });

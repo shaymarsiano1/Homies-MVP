@@ -325,13 +325,13 @@ input[type="range"]::-ms-thumb {
 /* Profile Page Container */
 .profile-page {
     position: fixed;
-    top: 5%; 
-    left: 10%; 
-    right: 10%; 
-    bottom: 10%; 
+    top: 0%; 
+    left: 0%; 
+    right: 0%; 
+    bottom: 0%; 
     background-color: #fff; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
-    z-index: 2000; 
+    z-index: 100; 
     display: none; 
     overflow: auto; 
     border-radius: 10px; 
@@ -359,11 +359,11 @@ input[type="range"]::-ms-thumb {
 .image-container {
     position: relative; 
     display: inline-block; 
-    margin: auto; 
 }
 
 #pencil_icon {
-    bottom: 10px; /* Position 10px from the bottom of the profile picture */
+    position: absolute;
+    top: -1px;
     right: 10px; 
     background-color: #fff;
     border-radius: 50%; 
@@ -372,10 +372,6 @@ input[type="range"]::-ms-thumb {
     cursor: pointer; 
     width: 25px; 
     height: 25px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    margin-left: 100px;
 }
 
 
@@ -412,8 +408,8 @@ input[type="range"]::-ms-thumb {
 
 
 .bi-gear {
-    float: right; /* Aligns the SVG to the right */
-    margin-left: 10px; /* Adds space between the SVG and other content */
+    float: right; 
+    margin-left: 10px; 
     width: 25px; 
     height: 25px; 
     opacity: 50%;
@@ -421,6 +417,99 @@ input[type="range"]::-ms-thumb {
 
 }
 
+
+/* Container for all messages */
+#massagesPage {
+    position: fixed;
+    top: 0%; 
+    left: 0%; 
+    right: 0%; 
+    bottom: 0%; 
+    background-color: #fff; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    z-index: 200; 
+    display: none; 
+    overflow: auto; 
+    border-radius: 10px; 
+}
+
+
+
+.massage {
+    display: flex;
+    align-items: center; 
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 10px; 
+    margin-bottom: 15px; 
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+
+}
+
+/* Left Image */
+.massage_pic {
+    border-radius: 25px;
+    width: 150px; 
+    height: 120px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+
+.massage_content {
+    flex: 1; /* Allow the middle content to grow and fill available space */
+}
+
+.massage_address {
+    font-size: 16px; 
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0; 
+}
+
+.massage_details_list {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    color: #666; 
+    font-size: 14px;
+}
+
+.massage_details {
+    margin: 2px 0; 
+}
+
+/* Right Side (Price and Button) */
+.massage_right {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 5px; 
+}
+
+.massage_price {
+    font-size: 16px; 
+    font-weight: bold;
+    color: #e74c3c; 
+    margin: 0;
+}
+
+.your_turn_btn {
+    background-color: #2e5077; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 10px; 
+    font-size: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: max-content; 
+}
+
+.your_turn_btn:hover {
+    background-color: #213555; 
+}
 
 
 }
